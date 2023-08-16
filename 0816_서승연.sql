@@ -1,5 +1,9 @@
 # 3-50 모든 고객을 삭제하시오.
-DELETE	FROM	Customer;
+# DELETE	FROM	Customer;
+SET SQL_SAFE_UPDATES = 0;
+DELETE FROM Customer;
+SET SQL_SAFE_UPDATES = 1;
+
 
 # 3-49 Customer 테이블에서 고객번호가 5인 고객을 삭제하시오.
 DELETE	FROM	Customer
@@ -218,3 +222,5 @@ WHERE	customer.custid = orders.custid;
 
 SELECT	*
 FROM	Customer, Orders;
+
+USE sys
